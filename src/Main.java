@@ -145,9 +145,6 @@ public class Main {
     }
     public static void Ejercicio12(){
         Scanner scanner = new Scanner(System.in);
-
-
-
         do{
             System.out.println("Digita una cadena de 5 palabras de largo");
             System.out.println("Que empiezen con X y termine con O");
@@ -177,6 +174,30 @@ public class Main {
         }while(true);
 
     }
+    public static void Ejercicio13(){
+        Scanner scanner = new Scanner(System.in);
+         int num = scanner.nextInt();
+        for (int i = 0; i < num; i++) {
+            for (int j = 0; j < num; j++) {
+                if(i == 0 || j == 0 || i == num - 1 || j == num -1){
+                    System.out.print(" *");
+                }else {
+                    System.out.print("  ");
+                }
+            }
+            System.out.print("\n");
+        }
+    }
+    public static void Ejercicio14(int euro){
+
+        float libras = euro * 0.68f;
+        if(euro == 1){
+            System.out.println( euro +" euro"+ " son: " + libras);
+        } else if (euro < 1 || euro > 0 || euro >= 10) {
+            System.out.println( euro +" euros "+ "son: " + libras);
+        }
+
+    }
     public static void main(String[] args) {
       //Ejercicio1();
       //Ejercicio2();
@@ -190,5 +211,8 @@ public class Main {
       //Ejercicio10();
       //Ejercicio11();
       //Ejercicio12();
+      //Ejercicio13();
+      //Ejercicio14(1);
+      //Ejercicio15();
     }
 }
