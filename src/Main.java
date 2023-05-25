@@ -145,21 +145,35 @@ public class Main {
     }
     public static void Ejercicio12(){
         Scanner scanner = new Scanner(System.in);
-        System.out.println("Digita una cadena de 5 palabras de largo");
-        System.out.println("Que empiezen con X y termine con O");
-        String cadena = scanner.nextLine();
-        int length = cadena.length();
-        System.out.println(length);
+
+
+
         do{
-            length = cadena.length();
-            if(length == 5){
+            System.out.println("Digita una cadena de 5 palabras de largo");
+            System.out.println("Que empiezen con X y termine con O");
+          String cadena = scanner.nextLine();
+           int length = cadena.length();
+
+            if(cadena.equals("&&&&&")){
+                System.out.println("saliste");
                 break;
-            }else if(length != 5){
-                System.out.println("Error en el tamaño de la cadena");
-                 cadena = scanner.nextLine();
-
             }
+            if(length == 5){
 
+                    char subCadena = cadena.charAt(0);
+                    char subCadena2 = cadena.charAt(length-1);
+                    if(Character.toUpperCase(subCadena) == 'X' && Character.toUpperCase(subCadena2)=='O'){
+                        System.out.println("Correcto");
+
+                    }else{
+                        System.out.println("Incorrecto");
+
+                    }
+
+            }else if(length != 5) {
+                System.out.println("Error en el tamaño de la cadena");
+                cadena = scanner.nextLine();
+            }
         }while(true);
 
     }
@@ -175,6 +189,6 @@ public class Main {
       //Ejercicio9();
       //Ejercicio10();
       //Ejercicio11();
-      Ejercicio12();
+      //Ejercicio12();
     }
 }
