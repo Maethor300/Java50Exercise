@@ -211,7 +211,7 @@ public class Main {
         System.out.println("Tamaño Del Array");
         int tamaño = scanner.nextInt();
         int[] array = new int[tamaño];
-        String comparacion = "";
+
 
         int i = 0;
         do {
@@ -220,7 +220,7 @@ public class Main {
             int conteo = 0;
             for (  i = 0; i < tamaño ; i++) {
 
-                int aleatorio = (int) (Math.random() * 3);
+                int aleatorio = (int) (Math.random() * 10);
                 array[i] = aleatorio;
 
                 if(num == array[i]){
@@ -234,6 +234,58 @@ public class Main {
               i++;
         }while(i < tamaño);
 
+    }
+    public static void Ejercicio17(){
+
+        int[] array = new int[100];
+
+
+            for ( int i = 0; i < 99 ; i++) {
+
+                int numeroAleatorio = (int) (Math.random() * 100000);
+                array[i] = numeroAleatorio;
+            }
+            for (int i = 0; i < 99; i++) {
+                if(array[i] >= 10000){
+                    System.out.println("El numero es de 5 digitos y es : " + array[i]);
+                }else if(array[i] >= 1000 && array[i] < 10000){
+                    System.out.println("El numero es de 4 digitos y es : " + array[i]);
+                } else if (array[i] >= 100 && array[i] < 1000) {
+                    System.out.println("El numero es de 3 digitos y es : " + array[i]);
+                } else if (array[i] >= 10 && array[i] < 100) {
+                    System.out.println("El numero es de 2 digitos y es : " + array[i]);
+                } else if (array[i]<10 ) {
+                    System.out.println("El numero es de 1 digitos y es : " + array[i]);
+                }
+            }
+
+    }
+    public static void Ejercicio18(){
+        int[][] matriz = new int[10][10];
+        for (int i = 0; i < 9; i++) {
+            for (int j = 0; j < 9; j++) {
+                int numeroAleatorio = (int) (Math.random() * 9);
+                matriz[i][j] = numeroAleatorio;
+            }
+        }
+        System.out.println("Matriz Normal");
+        for (int i = 0; i < 9; i++) {
+            for (int j = 0; j < 9; j++) {
+
+                System.out.print(matriz[i][j]);
+            }
+            System.out.println();
+        }
+        System.out.println("");
+        System.out.println("Matriz invertida");
+        for (int i = 0; i < 9; i++) {
+            for (int j = 0; j < 9; j++) {
+
+                System.out.print(matriz[j][i]);
+            }
+            System.out.println();
+        }
+        System.out.println("");
     }
     public static void main(String[] args) {
       //Ejercicio1();
@@ -252,5 +304,7 @@ public class Main {
       //Ejercicio14(1);
       //Ejercicio15();
       //Ejercicio16();
+      //Ejercicio17();
+      Ejercicio18();
     }
 }
