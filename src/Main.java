@@ -198,6 +198,43 @@ public class Main {
         }
 
     }
+    public static void Ejercicio15(){
+        int[] array = new int[101];
+        for (int i = 1; i <= 100; i++) {
+            array[i] = i;
+            System.out.println(array[i]);
+        }
+
+    }
+    public static void Ejercicio16(){
+        Scanner scanner = new Scanner(System.in);
+        System.out.println("Tamaño Del Array");
+        int tamaño = scanner.nextInt();
+        int[] array = new int[tamaño];
+        String comparacion = "";
+
+        int i = 0;
+        do {
+            System.out.println("Digita un numero");
+            int num = scanner.nextInt();
+            int conteo = 0;
+            for (  i = 0; i < tamaño ; i++) {
+
+                int aleatorio = (int) (Math.random() * 3);
+                array[i] = aleatorio;
+
+                if(num == array[i]){
+                    conteo++;
+
+                }
+                System.out.println(aleatorio);
+
+            }
+            System.out.println("Numero "+num+" encontrado: " + conteo);
+              i++;
+        }while(i < tamaño);
+
+    }
     public static void main(String[] args) {
       //Ejercicio1();
       //Ejercicio2();
@@ -214,5 +251,6 @@ public class Main {
       //Ejercicio13();
       //Ejercicio14(1);
       //Ejercicio15();
+      //Ejercicio16();
     }
 }
