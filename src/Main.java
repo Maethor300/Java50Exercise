@@ -360,33 +360,56 @@ public class Main {
         int conteo = 0;
         int conteo2 = 3-1;
         for (int i = 0; i < 3; i++) {
-
             for (int j = 0; j < 3; j++) {
 
-                if(matriz[0][j] == matriz[i][j]){
+                if(matriz[0][j] == matriz[i][j] ){
                     variable = variable + matriz[i][j];
-
                 }
-
-                else if (matriz[i][conteo] == matriz[i][j] ) {
+                if(matriz[i][conteo] == matriz[i][j]){
                     variable1 = variable1 + matriz[i][j];
-
-                } else if (matriz[i][conteo2] == matriz[i][j]) {
-                    variable2 = variable2 + matriz[i][j];
-                } else if (matriz[conteo][j] == matriz[i][j]) {
-                     suma = suma + matriz[i][j];
                 }
-
+                if(matriz[i][conteo2] == matriz[i][j]){
+                    variable2 = variable2 + matriz[i][j];
+                }
+                if(matriz[conteo][j] == matriz[i][j]){
+                    suma = suma + matriz[i][j];
+                }
             }
-            conteo = conteo + 1;
-            conteo2 = conteo2 - 1;
+            conteo++;
+            conteo2--;
         }
-          if(suma/3 == variable){
-              System.out.println("Es magico");
-          }
-        System.out.println(variable1);
+
+
         for (int i = 0; i < 3; i++) {
             for (int j = 0; j < 3; j++) {
+                System.out.print(matriz[i][j]);
+            }
+            System.out.println();
+        }
+        System.out.println("");
+        if(suma/3 == variable && suma/3 == variable1 && suma/3 == variable2){
+            System.out.println("Es magica");
+        }else {
+            System.out.println("No es magica");
+        }
+    }
+    public static void Ejercicio21(){
+        int[][] matriz = new int[3][3];
+        int[][] matriz2 = new int[10][10];
+        for (int i = 0; i < 10; i++) {
+            for (int j = 0; j < 10; j++) {
+                int numeroAleatorio = (int) (Math.random() * 9);
+                matriz2[i][j] = numeroAleatorio;
+                System.out.print(matriz2[i][j]);
+            }
+            System.out.println();
+        }
+        System.out.println("");
+        System.out.println("Matriz 3x3");
+        for (int i = 0; i < 3; i++) {
+            for (int j = 0; j < 3; j++) {
+                int numeroAleatorio = (int) (Math.random() * 9);
+                matriz[i][j] = numeroAleatorio;
                 System.out.print(matriz[i][j]);
             }
             System.out.println();
@@ -413,6 +436,7 @@ public class Main {
       //Ejercicio17();
       //Ejercicio18();
       //Ejercicio19();
-      Ejercicio20();
+      //Ejercicio20();
+      //Ejercicio21();
     }
 }
