@@ -261,16 +261,16 @@ public class Main {
 
     }
     public static void Ejercicio18(){
-        int[][] matriz = new int[10][10];
-        for (int i = 0; i < 9; i++) {
-            for (int j = 0; j < 9; j++) {
+        int[][] matriz = new int[3][3];
+        for (int i = 0; i < 3; i++) {
+            for (int j = 0; j < 3; j++) {
                 int numeroAleatorio = (int) (Math.random() * 9);
                 matriz[i][j] = numeroAleatorio;
             }
         }
         System.out.println("Matriz Normal");
-        for (int i = 0; i < 9; i++) {
-            for (int j = 0; j < 9; j++) {
+        for (int i = 0; i < 3; i++) {
+            for (int j = 0; j < 3; j++) {
 
                 System.out.print(matriz[i][j]);
             }
@@ -278,10 +278,116 @@ public class Main {
         }
         System.out.println("");
         System.out.println("Matriz invertida");
-        for (int i = 0; i < 9; i++) {
-            for (int j = 0; j < 9; j++) {
+        for (int i = 0; i < 3; i++) {
+            for (int j = 0; j < 3; j++) {
 
                 System.out.print(matriz[j][i]);
+            }
+            System.out.println();
+        }
+        System.out.println("");
+    }
+    public static void Ejercicio19(){
+          Scanner scanner = new Scanner(System.in);
+          int[][] matriz = new int[3][3];
+          int[][] matrizInvertida = new int[3][3];
+          boolean boolean1 = false;
+          boolean boolean2 = false;
+        for (int i = 0; i < 3; i++) {
+            for (int j = 0; j < 3; j++) {
+                System.out.println("Introduce un numero");
+                int numbers = scanner.nextInt();
+                matriz[i][j] = numbers;
+            }
+        }
+        for (int i = 0; i < 3; i++) {
+            for (int j = 0; j < 3; j++) {
+                System.out.print(matriz[i][j]);
+            }
+            System.out.println();
+        }
+        System.out.println("");
+        System.out.println("Matriz Invertida");
+        for (int i = 0; i < 3; i++) {
+            for (int j = 0; j < 3; j++) {
+
+                matrizInvertida[i][j] = matriz[j][i];
+                System.out.print(matrizInvertida[i][j]);
+            }
+            System.out.println();
+        }
+
+        System.out.println("Prueba: ");
+        for (int i = 0; i < 3; i++) {
+            for (int j = 0; j < 3; j++) {
+                if (matriz[i][j] == matrizInvertida[i][j] * -1){
+                    boolean1 = true;
+                }else {
+                    boolean1 = false;
+                    break;
+                }
+            }
+            System.out.println();
+        }
+        for (int i = 0; i < 3; i++) {
+            for (int j = 0; j < 3; j++) {
+                if (matriz[i][j] == matrizInvertida[i][j]){
+                    boolean2 = true;
+                }else {
+                    boolean2 = false;
+                    break;
+                }
+            }
+            System.out.println();
+        }
+        System.out.println("Es igual pero no es antiSimetrica: " + boolean2);
+        System.out.println("Es antiSimetrica: "+boolean1);
+    }
+    public static void Ejercicio20(){
+        Scanner scanner = new Scanner(System.in);
+        int[][] matriz = new int[3][3];
+         int variable = 0;
+        int variable1 = 0;
+        int variable2 = 0;
+        int suma = 0;
+        for (int i = 0; i < 3; i++) {
+            for (int j = 0; j < 3; j++) {
+                System.out.println("Digita los numeros: ");
+                int numbers = scanner.nextInt();
+                matriz[i][j] = numbers;
+            }
+        }
+        int conteo = 0;
+        int conteo2 = 3-1;
+        for (int i = 0; i < 3; i++) {
+
+            for (int j = 0; j < 3; j++) {
+
+                if(matriz[0][j] == matriz[i][j]){
+                    variable = variable + matriz[i][j];
+
+                }
+
+                else if (matriz[i][conteo] == matriz[i][j] ) {
+                    variable1 = variable1 + matriz[i][j];
+
+                } else if (matriz[i][conteo2] == matriz[i][j]) {
+                    variable2 = variable2 + matriz[i][j];
+                } else if (matriz[conteo][j] == matriz[i][j]) {
+                     suma = suma + matriz[i][j];
+                }
+
+            }
+            conteo = conteo + 1;
+            conteo2 = conteo2 - 1;
+        }
+          if(suma/3 == variable){
+              System.out.println("Es magico");
+          }
+        System.out.println(variable1);
+        for (int i = 0; i < 3; i++) {
+            for (int j = 0; j < 3; j++) {
+                System.out.print(matriz[i][j]);
             }
             System.out.println();
         }
@@ -305,6 +411,8 @@ public class Main {
       //Ejercicio15();
       //Ejercicio16();
       //Ejercicio17();
-      Ejercicio18();
+      //Ejercicio18();
+      //Ejercicio19();
+      Ejercicio20();
     }
 }
