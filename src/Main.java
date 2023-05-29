@@ -396,11 +396,18 @@ public class Main {
     public static void Ejercicio21(){
         int[][] matriz = new int[3][3];
         int[][] matriz2 = new int[10][10];
+        int[] array = {1,26,36,47,5,6,72,81,95,10,11,12,13,21,41,22,67,20,10,61,56,78,87,90,9,90,17,12,87,67,41,87,24,56,97,74,87,42,64,35,32,76,79,1,36,5,67,96,12,11,99,13,54,88,89,90,75,12,41,76,67,78,87,45,12,22,26,42,56,78,98,45,34,23,32,56,74,16,19,18,24,67,97,46,87,13,67,89,93,24,21,68,78,98,90,67,12,41,65,12};
+        int[] array2 = {72,81,95,67,20,10,17,12,87};
+        int indice = 0;
+        int indice2 = 0;
+        System.out.println("Matriz 10x10");
         for (int i = 0; i < 10; i++) {
             for (int j = 0; j < 10; j++) {
-                int numeroAleatorio = (int) (Math.random() * 9);
-                matriz2[i][j] = numeroAleatorio;
-                System.out.print(matriz2[i][j]);
+
+                    matriz2[i][j] = array[indice];
+                    indice++;
+
+                System.out.print(" "+matriz2[i][j]);
             }
             System.out.println();
         }
@@ -408,13 +415,109 @@ public class Main {
         System.out.println("Matriz 3x3");
         for (int i = 0; i < 3; i++) {
             for (int j = 0; j < 3; j++) {
-                int numeroAleatorio = (int) (Math.random() * 9);
-                matriz[i][j] = numeroAleatorio;
-                System.out.print(matriz[i][j]);
+
+                matriz[i][j] =  array2[indice2];
+                indice2++;
+
+                System.out.print(" "+matriz[i][j]);
             }
             System.out.println();
         }
         System.out.println("");
+        int conteo ;
+        int conteo0;
+        int conteo1;
+        int conteo1_1;
+        int conteo3;
+        int conteo3_1;
+        int varJava;
+        int siguiente;
+        int resta;
+        int varJava2;
+        int j1 = 0;
+        int j2 = 0;
+        int j3 = 0;
+        for (int i = 0; i < 10; i++) {
+
+            conteo = 0;
+            conteo0 = 0;
+            conteo1 = 0;
+            conteo1_1 = 0;
+            conteo3 = 0;
+            conteo3_1 = 0;
+            varJava = 0;
+            varJava2 = 0;
+            siguiente = 0;
+            resta = 0;
+
+            for (int j = 0; j < 10; j++) {
+                if (matriz[0][conteo] == matriz2[i][j]) {
+                    if(conteo == 0){
+                         varJava = j;
+                    }
+
+
+                    if(j - varJava == conteo0){
+                       conteo0++;
+                    }
+                    if(conteo0 == 3){
+                        System.out.println("ubicacion i: " + i + " ubicacion j: " + j);
+                        j1 = j;
+                        System.out.println(j1);
+                    }
+                        if (conteo < 2) {
+                            conteo++;
+                        }
+                }
+                if (matriz[1][conteo1] == matriz2[i][j]) {
+                    if(conteo1 == 0){
+                        varJava = j;
+                    }
+
+
+                    if(j - varJava == conteo1_1){
+
+                        conteo1_1++;
+
+                    }
+                    if(conteo1_1 == 3){
+                        System.out.println("ubicacion i: " + i + " ubicacion j: " + j);
+                        j2 = j;
+                        System.out.println(j2);
+                    }
+                    if (conteo1 < 2) {
+                        conteo1++;
+                    }
+                }
+                if (matriz[2][conteo3] == matriz2[i][j]) {
+                    if(conteo3 == 0){
+                        varJava = j;
+                    }
+
+
+                    if(j - varJava == conteo3_1){
+
+                        conteo3_1++;
+
+                    }
+                    if(conteo3_1 == 3){
+                        System.out.println("ubicacion i: " + i + " ubicacion j: " + j);
+                        j3 = j;
+                        System.out.println(j3);
+                    }
+                    if (conteo3 < 2) {
+                        conteo3++;
+                    }
+                }
+
+                System.out.println();
+            }
+
+
+        }
+        if(j1==j2 && j2==j3 ){
+            System.out.println("Existe la matriz 3x3 dentro de la matriz 10x10");
+        }
     }
     public static void main(String[] args) {
       //Ejercicio1();
