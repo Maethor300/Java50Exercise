@@ -519,6 +519,21 @@ public class Main {
             System.out.println("Existe la matriz 3x3 dentro de la matriz 10x10");
         }
     }
+    public static void Ejercicio1Extra(){
+          Scanner scanner = new Scanner(System.in);
+          double numero = scanner.nextInt();
+          double operacion = numero / 24;
+
+          double floor1 ;
+          if(operacion < 24){
+              floor1 = operacion % 1*24;
+
+          }else {
+              floor1 = operacion % 1 *24;
+          }
+        System.out.println("Dias: "+ Math.floor(operacion)+" Horas: "+  Math.floor(floor1));
+
+    }
     public static void main(String[] args) {
       //Ejercicio1();
       //Ejercicio2();
@@ -541,5 +556,6 @@ public class Main {
       //Ejercicio19();
       //Ejercicio20();
       //Ejercicio21();
+       Ejercicio1Extra();
     }
 }
