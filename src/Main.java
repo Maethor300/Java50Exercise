@@ -552,6 +552,18 @@ public class Main {
         d = aux;
         System.out.println("a: "+ a + " b: "+b+" c: "+c+" d: "+ d);
     }
+    public static void Ejercicio3Extra(){
+        Scanner scanner = new Scanner(System.in);
+        char vocal = scanner.next().charAt(0);
+        String Mayuscula = String.valueOf(vocal).toUpperCase();
+
+        if(Mayuscula.equals("A") || Mayuscula.equals("E") || Mayuscula.equals("I") ||Mayuscula.equals("O") || Mayuscula.equals("U")){
+            System.out.println("Es Vocal");
+        }else {
+            System.out.println("No es vocal");
+        }
+
+    }
     public static void main(String[] args) {
       //Ejercicio1();
       //Ejercicio2();
@@ -575,6 +587,7 @@ public class Main {
       //Ejercicio20();
       //Ejercicio21();
       //Ejercicio1Extra();
-      Ejercicio2Extra();
+      //Ejercicio2Extra();
+      //Ejercicio3Extra();
     }
 }
