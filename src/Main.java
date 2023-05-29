@@ -521,6 +521,7 @@ public class Main {
     }
     public static void Ejercicio1Extra(){
           Scanner scanner = new Scanner(System.in);
+        System.out.println("Digita el tiempo en minutos: ");
           double numero = scanner.nextInt();
           double operacion = numero / 24;
 
@@ -533,6 +534,23 @@ public class Main {
           }
         System.out.println("Dias: "+ Math.floor(operacion)+" Horas: "+  Math.floor(floor1));
 
+    }
+    public static void Ejercicio2Extra(){
+        Scanner scanner = new Scanner(System.in);
+        System.out.println("Digita el valor de la variable A: ");
+        int a = scanner.nextInt();
+        System.out.println("Digita el valor de la variable B: ");
+        int b = scanner.nextInt();
+        System.out.println("Digita el valor de la variable C: ");
+        int c = scanner.nextInt();
+        System.out.println("Digita el valor de la variable D: ");
+        int d = scanner.nextInt();
+        int aux = b;
+        b = c;
+        c = a;
+        a = d;
+        d = aux;
+        System.out.println("a: "+ a + " b: "+b+" c: "+c+" d: "+ d);
     }
     public static void main(String[] args) {
       //Ejercicio1();
@@ -556,6 +574,7 @@ public class Main {
       //Ejercicio19();
       //Ejercicio20();
       //Ejercicio21();
-       Ejercicio1Extra();
+      //Ejercicio1Extra();
+      Ejercicio2Extra();
     }
 }
