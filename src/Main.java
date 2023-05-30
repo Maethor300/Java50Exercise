@@ -564,6 +564,43 @@ public class Main {
         }
 
     }
+    public static void Ejercicio4Extra(){
+        int conteo = 1;
+        String romano = "";
+        String I = "I";
+        String X = "X";
+        for (int i = 1; i <= 10; i++) {
+
+                 if(i <= 3){
+                     romano = "I".concat(romano);
+                     System.out.println(romano);
+             }
+                if(i == 4 ){
+                    romano =  romano.replace("I", "" );
+                    romano = "V".concat(romano);
+                    romano = I.concat(romano);
+                    System.out.println(romano);
+                }if(i == 5){
+
+                romano =  romano.replace("IV", "V");
+                System.out.println(romano);
+            }if(i > 5 && i <= 8 ){
+                 romano = romano.concat(I);
+                System.out.println(romano);
+            }if(i == 9){
+                romano =  romano.replace("V", X);
+                romano =  romano.replace("I", "");
+                romano = I.concat(romano);
+                System.out.println(romano);
+            }if(i == 10 ){
+                romano =  romano.replace("I", "");
+
+                System.out.println(romano);
+            }
+             conteo++;
+        }
+
+    }
     public static void main(String[] args) {
       //Ejercicio1();
       //Ejercicio2();
@@ -589,5 +626,6 @@ public class Main {
       //Ejercicio1Extra();
       //Ejercicio2Extra();
       //Ejercicio3Extra();
+      Ejercicio4Extra();
     }
 }
