@@ -761,6 +761,21 @@ public class Main {
 
         }while(true);
     }
+    public static void Ejercicio11Extra(){
+        Scanner scanner = new Scanner(System.in).useLocale(Locale.US);
+        System.out.println("Digita el numero");
+        double numero = scanner.nextDouble();
+        double i = 1;
+        double entero;
+        double division = numero / 10;
+
+        do {
+            division = division / 10;
+            entero = Math.round(division);
+            i++;
+        }while (entero > 0);
+        System.out.println("El tamaño del numero es: " + Math.round(i));
+    }
     public static void main(String[] args) {
       //Ejercicio1();
       //Ejercicio2();
@@ -794,5 +809,6 @@ public class Main {
       //Ejercicio8Extra();
       //Ejercicio9Extra();
       //Ejercicio10Extra();
+      Ejercicio11Extra();
     }
 }
