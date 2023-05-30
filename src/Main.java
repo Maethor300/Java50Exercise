@@ -929,6 +929,51 @@ public class Main {
         System.out.println("");
         System.out.println("La suma de todos los digitos es: "+suma);
     }
+
+    public static void Ejercicio19Extra(){
+        Scanner scanner = new Scanner(System.in).useLocale(Locale.US);
+        int[] array1 = new int[3];
+        int[] array2 = new int[3];
+        boolean false1 = true;
+        System.out.println("Primer Array");
+        for (int i = 0; i < 3; i++) {
+            System.out.println("Digita los digitos");
+            int numeros = scanner.nextInt();
+            array1[i] = numeros;
+
+        }
+        System.out.println("Segundo Array");
+        System.out.println("");
+        for (int i = 0; i < 3; i++) {
+            System.out.println("Digita los digitos");
+            int numeros = scanner.nextInt();
+            array2[i] = numeros;
+
+        }
+        for (int i = 0; i < 3; i++) {
+
+            System.out.print(array1[i]);
+        }
+        System.out.println("");
+        for (int i = 0; i < 3; i++) {
+
+            System.out.print(array2[i]);
+        }
+        System.out.println("");
+        for (int i = 0; i < 3; i++) {
+            for (int j = 0; j < 3; j++) {
+                if(array1[i] != array2[j]){
+                    false1 = false;
+                    break;
+                }else {
+                    System.out.println("Es igual");
+                }
+            }
+        }
+        if(false1 == false){
+            System.out.println("No es igual");
+        }
+    }
     public static void main(String[] args) {
       //Ejercicio1();
       //Ejercicio2();
@@ -969,6 +1014,7 @@ public class Main {
       //Ejercicio15Extra();
       //Ejercicio16Extra();
       //Ejercicio17Extra();
-      Ejercicio18Extra();
+      //Ejercicio18Extra();
+      //Ejercicio19Extra();
     }
 }
