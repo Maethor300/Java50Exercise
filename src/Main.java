@@ -858,6 +858,32 @@ public class Main {
               break;
         }
     }
+
+    public static void Ejercicio16Extra(){
+        Scanner scanner = new Scanner(System.in).useLocale(Locale.US);
+
+        do {
+            System.out.println("Digita el nombre de la persona: ");
+            String nombre = scanner.next();
+
+            System.out.println("Digita la edad de la persona: ");
+            int edad = scanner.nextInt();
+            if(edad > 18){
+                System.out.println(nombre+ " " + edad+" "+ "Es mayor de edad");
+            }else {
+                System.out.println(nombre + edad + "Es menor de edad");
+
+            }
+            System.out.println("Quieres continuar S/N");
+            scanner.nextLine();
+            String desicion = scanner.nextLine();
+            String mayuscula = desicion.toUpperCase();
+            if(mayuscula.equals("N")){
+                break;
+            }
+
+        }while(true);
+    }
     public static void main(String[] args) {
       //Ejercicio1();
       //Ejercicio2();
@@ -895,6 +921,7 @@ public class Main {
       //Ejercicio12Extra();
       //Ejercicio13Extra();
       //Ejercicio14Extra();
-      Ejercicio15Extra();
+      //Ejercicio15Extra();
+      Ejercicio16Extra();
     }
 }
