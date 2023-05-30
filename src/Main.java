@@ -565,7 +565,7 @@ public class Main {
 
     }
     public static void Ejercicio4Extra(){
-        int conteo = 1;
+
         String romano = "";
         String I = "I";
         String X = "X";
@@ -597,7 +597,26 @@ public class Main {
 
                 System.out.println(romano);
             }
-             conteo++;
+
+        }
+
+    }
+    public static void Ejercicio5Extra(){
+        Scanner scanner = new Scanner(System.in);
+        String socios = scanner.nextLine();
+        String mayusculas = socios.toUpperCase();
+        double tratamiento = scanner.nextDouble();
+
+        switch (mayusculas){
+            case "A":
+                System.out.println("El valor seria de: "+ tratamiento * 0.50);
+            break;
+            case "B":
+                System.out.println("El valor seria de: "+ (tratamiento-tratamiento * 0.35));
+            break;
+            case "C":
+                System.out.println("No tienes descuento");
+                System.out.println("El valor seria de: "+  tratamiento);
         }
 
     }
@@ -626,6 +645,7 @@ public class Main {
       //Ejercicio1Extra();
       //Ejercicio2Extra();
       //Ejercicio3Extra();
-      Ejercicio4Extra();
+      //Ejercicio4Extra();
+      Ejercicio5Extra();
     }
 }
