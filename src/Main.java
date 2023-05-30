@@ -970,9 +970,19 @@ public class Main {
                 }
             }
         }
-        if(false1 == false){
+        if(!false1){
             System.out.println("No es igual");
         }
+    }
+
+    public static void Ejercicio20Extra(int[] arr){
+        for (int i = 0; i < 10; i++) {
+            int aleatorio = (int) (Math.random() * 9);
+            arr[i] =aleatorio;
+            System.out.print(" "+arr[i]);
+        }
+
+
     }
     public static void main(String[] args) {
       //Ejercicio1();
@@ -1016,5 +1026,10 @@ public class Main {
       //Ejercicio17Extra();
       //Ejercicio18Extra();
       //Ejercicio19Extra();
+       // El siguiente array va con el ejercicio 20
+        int[] array = new int[10];
+        //Ejercicio20Extra(array);
+      //Fin
+
     }
 }
