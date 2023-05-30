@@ -700,6 +700,30 @@ public class Main {
         System.out.println("El numero menor es: " + menor);
         System.out.println("El promedio de los numeros es: " + promedio / numeros);
     }
+    public static void Ejercicio8Extra(){
+       Scanner scanner = new Scanner(System.in).useLocale(Locale.US);
+         String pares = "";
+         String impares = "";
+        do {
+            System.out.println("Digita el numero: ");
+            int numeros = scanner.nextInt();
+            String StringN = String.valueOf(numeros);
+            if(numeros % 2 == 0){
+                pares = pares +"[" +StringN  +"]";
+            }
+            if(numeros % 2 != 0){
+                impares = impares +"[" +StringN  +"]";
+            }
+            if(numeros % 5 == 0){
+                System.out.println("Es multiplo de 5 off");
+                break;
+            }
+
+
+        }while(true);
+        System.out.println("Pares: "+pares);
+        System.out.println("Impares: "+impares);
+    }
     public static void main(String[] args) {
       //Ejercicio1();
       //Ejercicio2();
@@ -730,6 +754,6 @@ public class Main {
       //Ejercicio6Extra();
       //Ejercicio7ExtraVDowhile();
       //Ejercicio7ExtraVwhile();
-
+      Ejercicio8Extra();
     }
 }
