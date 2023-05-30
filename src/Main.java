@@ -644,6 +644,62 @@ public class Main {
         System.out.println("Estatura promedio 1.60 mts " + promedio160);
         System.out.println("Estatura promedio total:  " + promedioTotal);
     }
+    public static void Ejercicio7ExtraVDowhile(){
+        Scanner scanner = new Scanner(System.in).useLocale(Locale.US);
+        System.out.println("Digita la cantidad de numeros que quieres agregar: ");
+        int numeros = scanner.nextInt();
+        int mayor = 0;
+        int menor = 0;
+        double promedio = 0;
+        int i = 0;
+        do {
+            i++;
+            System.out.println("Digita el numero " +i+ ": ");
+            int number = scanner.nextInt();
+            promedio = promedio + number;
+            if(i == 1){
+                menor = number;
+            }
+            if(menor > number){
+                menor = number;
+            }
+            if(mayor < number){
+                mayor = number;
+            }
+
+        }while(i < numeros);
+        System.out.println("El numero mayor es: " + mayor);
+        System.out.println("El numero menor es: " + menor);
+        System.out.println("El promedio de los numeros es: " + promedio / numeros);
+    }
+    public static void Ejercicio7ExtraVwhile(){
+        Scanner scanner = new Scanner(System.in).useLocale(Locale.US);
+        System.out.println("Digita la cantidad de numeros que quieres agregar: ");
+        int numeros = scanner.nextInt();
+        int mayor = 0;
+        int menor = 0;
+        double promedio = 0;
+        int i = 0;
+        while (i < numeros ){
+            i++;
+            System.out.println("Digita el numero " +i+ ": ");
+            int number = scanner.nextInt();
+            promedio = promedio + number;
+            if(i == 1){
+                menor = number;
+            }
+            if(menor > number){
+                menor = number;
+            }
+            if(mayor < number){
+                mayor = number;
+            }
+
+        }
+        System.out.println("El numero mayor es: " + mayor);
+        System.out.println("El numero menor es: " + menor);
+        System.out.println("El promedio de los numeros es: " + promedio / numeros);
+    }
     public static void main(String[] args) {
       //Ejercicio1();
       //Ejercicio2();
@@ -671,6 +727,9 @@ public class Main {
       //Ejercicio3Extra();
       //Ejercicio4Extra();
       //Ejercicio5Extra();
-      Ejercicio6Extra();
+      //Ejercicio6Extra();
+      //Ejercicio7ExtraVDowhile();
+      //Ejercicio7ExtraVwhile();
+
     }
 }
