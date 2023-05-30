@@ -802,6 +802,19 @@ public class Main {
         }
          
     }
+    public static void Ejercicio13Extra(){
+        Scanner scanner = new Scanner(System.in).useLocale(Locale.US);
+        System.out.println("Digita el numero: ");
+        int numero = scanner.nextInt();
+        String acumular = "";
+        for (int i = 0; i <= numero; i++) {
+            for (int j = 1; j <= i; j++) {
+                System.out.print(acumular = String.valueOf(j));
+            }
+            System.out.println();
+        }
+    }
+
     public static void main(String[] args) {
       //Ejercicio1();
       //Ejercicio2();
@@ -837,5 +850,6 @@ public class Main {
       //Ejercicio10Extra();
       //Ejercicio11Extra();
       //Ejercicio12Extra();
+      //Ejercicio13Extra();
     }
 }
