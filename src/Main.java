@@ -6,6 +6,7 @@ import java.text.DecimalFormat;
 public class Main {
     public static void Ejercicio1(){
         DecimalFormat formato = new DecimalFormat("#.#");
+        //.useLocale(Locale.US) sirve para poner punto en vez de coma en los numeros con decimal
         Scanner scanner = new Scanner(System.in).useLocale(Locale.US);
         System.out.println("Digita el primer numero");
         float num = scanner.nextFloat();
@@ -724,6 +725,42 @@ public class Main {
         System.out.println("Pares: "+pares);
         System.out.println("Impares: "+impares);
     }
+
+    public static void Ejercicio9Extra(){
+        Scanner scanner = new Scanner(System.in).useLocale(Locale.US);
+        System.out.println("Digita el primer numero a dividir: ");
+        int numero1 = scanner.nextInt();
+        System.out.println("Digita el segundo numero: ");
+        int numero2 = scanner.nextInt();
+        int aux =  numero1 - numero2;
+        int resta;
+        int i = 1;
+        while (aux >= numero2){
+            resta = aux - numero2;
+            aux = resta;
+            i++;
+        }
+        System.out.println("Residuo: "+aux);
+        System.out.println("Cociente: " +i);
+    }
+
+    public static void Ejercicio10Extra(){
+        Scanner scanner = new Scanner(System.in).useLocale(Locale.US);
+        int numero1 = (int) (Math.random() * 11);
+        int numero2 = (int) (Math.random() * 11);
+        int multi = numero1 * numero2;
+        System.out.println("Digita un numero: ");
+        int numero = scanner.nextInt();
+        do {
+            System.out.println(multi);
+            if(numero == multi){
+                break;
+            }
+            System.out.println("Numero no encontrado: ");
+            numero = scanner.nextInt();
+
+        }while(true);
+    }
     public static void main(String[] args) {
       //Ejercicio1();
       //Ejercicio2();
@@ -754,6 +791,8 @@ public class Main {
       //Ejercicio6Extra();
       //Ejercicio7ExtraVDowhile();
       //Ejercicio7ExtraVwhile();
-      Ejercicio8Extra();
+      //Ejercicio8Extra();
+      //Ejercicio9Extra();
+      //Ejercicio10Extra();
     }
 }
