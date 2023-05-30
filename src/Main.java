@@ -833,6 +833,31 @@ public class Main {
         }
         System.out.println("Promedio de edad: "+edadsuma / conteo+" años");
     }
+
+    public static void Ejercicio15Extra(){
+        Scanner scanner = new Scanner(System.in).useLocale(Locale.US);
+        System.out.println("Escribre el primer numero: ");
+        double numero1 = scanner.nextDouble();
+        System.out.println("Escribre el segundo numero: ");
+        double numero2 = scanner.nextDouble();
+        System.out.println("Escoge: Suma,Resta,Multiplicacion o Division");
+        String operacion = scanner.next();
+        String mayuscula = operacion.toUpperCase();
+        switch (mayuscula){
+            case "SUMA":
+                System.out.println("Suma: " + (numero1 + numero2));
+             break;
+            case "RESTA":
+                System.out.println("Resta: " + (numero1 - numero2));
+             break;
+            case "MULTIPLICACION":
+                System.out.println("Multiplicacion: " + (numero1 * numero2));
+              break;
+            case "DIVISION":
+                System.out.println("Multiplicacion: " + (numero1 / numero2));
+              break;
+        }
+    }
     public static void main(String[] args) {
       //Ejercicio1();
       //Ejercicio2();
@@ -870,5 +895,6 @@ public class Main {
       //Ejercicio12Extra();
       //Ejercicio13Extra();
       //Ejercicio14Extra();
+      Ejercicio15Extra();
     }
 }
