@@ -884,6 +884,32 @@ public class Main {
 
         }while(true);
     }
+
+    public static void Ejercicio17Extra(){
+        Scanner scanner = new Scanner(System.in).useLocale(Locale.US);
+        System.out.println("Digita el numero");
+        int numero = scanner.nextInt();
+        boolean true1 = true;
+        if(numero == 0 || numero == 1){
+            System.out.println("No es primo");
+        }
+        if(numero == 2){
+            System.out.println("Es primo");
+        }
+        for (int i = 2; i < numero; i++) {
+             if(numero % i == 0){
+                 System.out.println("No es primo");
+                 true1 = false;
+                 break;
+
+             }
+
+        }
+        if(true1 == true){
+            System.out.println("Es primo");
+        }
+
+    }
     public static void main(String[] args) {
       //Ejercicio1();
       //Ejercicio2();
@@ -922,6 +948,7 @@ public class Main {
       //Ejercicio13Extra();
       //Ejercicio14Extra();
       //Ejercicio15Extra();
-      Ejercicio16Extra();
+      //Ejercicio16Extra();
+      Ejercicio17Extra();
     }
 }
