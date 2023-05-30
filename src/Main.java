@@ -620,6 +620,30 @@ public class Main {
         }
 
     }
+    public static void Ejercicio6Extra(){
+        Scanner scanner = new Scanner(System.in).useLocale(Locale.US);
+        System.out.println("Digita el numero de personas: ");
+        int personas = scanner.nextInt();
+        int i = 0;
+        double p160 = 0;
+        int conteo = 0;
+        double pTotal = 0;
+        do {
+            i++;
+            System.out.println("Digita la estatura de la persona "+i+" en cm: ");
+            double estatura = scanner.nextDouble();
+            pTotal = pTotal + estatura;
+            if(estatura <= 160){
+                  p160 = p160 + estatura;
+                  conteo++;
+            }
+        }while(i < personas);
+        System.out.println(conteo);
+        double promedio160 = p160 / conteo;
+        double promedioTotal = pTotal / personas;
+        System.out.println("Estatura promedio 1.60 mts " + promedio160);
+        System.out.println("Estatura promedio total:  " + promedioTotal);
+    }
     public static void main(String[] args) {
       //Ejercicio1();
       //Ejercicio2();
@@ -646,6 +670,7 @@ public class Main {
       //Ejercicio2Extra();
       //Ejercicio3Extra();
       //Ejercicio4Extra();
-      Ejercicio5Extra();
+      //Ejercicio5Extra();
+      Ejercicio6Extra();
     }
 }
