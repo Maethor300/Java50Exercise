@@ -910,6 +910,25 @@ public class Main {
         }
 
     }
+
+    public static void Ejercicio18Extra(){
+        Scanner scanner = new Scanner(System.in).useLocale(Locale.US);
+          int[] array = new int[3];
+          int suma = 0;
+        for (int i = 0; i < 3; i++) {
+            System.out.println("Digita el numero");
+             int numeros = scanner.nextInt();
+             array[i] = numeros;
+
+        }
+        System.out.println("Array");
+        for (int i = 0; i < 3; i++) {
+            suma = suma + array[i];
+            System.out.print(array[i]);
+        }
+        System.out.println("");
+        System.out.println("La suma de todos los digitos es: "+suma);
+    }
     public static void main(String[] args) {
       //Ejercicio1();
       //Ejercicio2();
@@ -949,6 +968,7 @@ public class Main {
       //Ejercicio14Extra();
       //Ejercicio15Extra();
       //Ejercicio16Extra();
-      Ejercicio17Extra();
+      //Ejercicio17Extra();
+      Ejercicio18Extra();
     }
 }
