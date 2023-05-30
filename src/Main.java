@@ -815,6 +815,24 @@ public class Main {
         }
     }
 
+    public static void Ejercicio14Extra(){
+        Scanner scanner = new Scanner(System.in).useLocale(Locale.US);
+        System.out.println("Digita la cantidad de familias: ");
+        int familias = scanner.nextInt();
+        int edadsuma = 0;
+        double conteo = 0;
+        for (int i = 0; i < familias; i++) {
+            System.out.println("Digita la cantidad de niños de la familia " + (i+1));
+            int niños = scanner.nextInt();
+            for (int j = 0; j < niños; j++) {
+                System.out.println("Digita la edad del niño: " + (j+1));
+                conteo++;
+                int edad = scanner.nextInt();
+                      edadsuma = edadsuma + edad;
+            }
+        }
+        System.out.println("Promedio de edad: "+edadsuma / conteo+" años");
+    }
     public static void main(String[] args) {
       //Ejercicio1();
       //Ejercicio2();
@@ -851,5 +869,6 @@ public class Main {
       //Ejercicio11Extra();
       //Ejercicio12Extra();
       //Ejercicio13Extra();
+      //Ejercicio14Extra();
     }
 }
