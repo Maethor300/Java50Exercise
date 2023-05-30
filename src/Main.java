@@ -1,6 +1,7 @@
 import java.util.Scanner;
 import java.util.Locale;
 import java.text.DecimalFormat;
+
 // Press Shift twice to open the Search Everywhere dialog and type `show whitespaces`,
 // then press Enter. You can now see whitespace characters in your code.
 public class Main {
@@ -776,6 +777,31 @@ public class Main {
         }while (entero > 0);
         System.out.println("El tamaño del numero es: " + Math.round(i));
     }
+    public static void Ejercicio12Extra(){
+        for (int i = 0; i < 9; i++) {
+            for (int j = 0; j < 9; j++) {
+                for (int k = 0; k < 9; k++) {
+                    if(i == 3){
+                        System.out.print("E-");
+                    }else {
+                        System.out.print(i+ "-");
+                    }
+                    if(j == 3){
+                        System.out.print("E-");
+                    }else {
+                        System.out.print(j+ "-");
+                    }
+                    if(k == 3){
+                        System.out.print("E");
+                    }else {
+                        System.out.print(k+ "-");
+                    }
+                    System.out.println();
+                }
+            }
+        }
+         
+    }
     public static void main(String[] args) {
       //Ejercicio1();
       //Ejercicio2();
@@ -809,6 +835,7 @@ public class Main {
       //Ejercicio8Extra();
       //Ejercicio9Extra();
       //Ejercicio10Extra();
-      Ejercicio11Extra();
+      //Ejercicio11Extra();
+      //Ejercicio12Extra();
     }
 }
