@@ -981,8 +981,46 @@ public class Main {
             arr[i] =aleatorio;
             System.out.print(" "+arr[i]);
         }
+    }
+    public static void Ejercicio21Extra(){
+        Scanner scanner = new Scanner(System.in).useLocale(Locale.US);
+        int i = 0;
+        double nota1;
+        double nota2;
+        double nota3;
+        double nota4;
+        int conteoR = 0;
+        int conteoA = 0;
+        double suma = 0;
+        do {
 
-
+           i++;
+            System.out.println("Digita la nota del estudiante " + i);
+            System.out.println("Digita la nota 1: ");
+            nota1 = scanner.nextDouble();
+            suma = suma + (nota1 * 0.10);
+            System.out.println("Digita la nota 2: ");
+            nota2 = scanner.nextDouble();
+            suma = suma + (nota2 * 0.15);
+            System.out.println("Digita la nota 3: ");
+            nota3= scanner.nextDouble();
+            suma = suma + (nota3 * 0.25);
+            System.out.println("Digita la nota 4: ");
+            nota4 = scanner.nextDouble();
+            suma = suma + (nota4 * 0.50);
+            double promedio = suma / 4;
+            System.out.println(suma);
+            System.out.println(promedio);
+            if(promedio < 7){
+                System.out.println("Reprobado");
+                conteoR++;
+            }else {
+                System.out.println("Aprobado");
+                conteoA++;
+            }
+        }while(i < 3);
+        System.out.println("Aprobaron: " + conteoA);
+        System.out.println("Reprobaron: " + conteoR);
     }
     public static void main(String[] args) {
       //Ejercicio1();
@@ -1030,6 +1068,6 @@ public class Main {
         int[] array = new int[10];
         //Ejercicio20Extra(array);
       //Fin
-
+        Ejercicio21Extra();
     }
 }
