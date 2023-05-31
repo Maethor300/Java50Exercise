@@ -1022,6 +1022,23 @@ public class Main {
         System.out.println("Aprobaron: " + conteoA);
         System.out.println("Reprobaron: " + conteoR);
     }
+    public static void Ejercicio22Extra(){
+        int[][] matriz = new int[10][10];
+        for (int i = 0; i < 10; i++) {
+            for (int j = 0; j < 10; j++) {
+                int aleatorio = (int) (Math.random()*8);
+                matriz[i][j] = aleatorio;
+            }
+        }
+        for (int i = 0; i < 10; i++) {
+            for (int j = 0; j < 10; j++) {
+
+                System.out.print(" "+matriz[i][j]);
+            }
+            System.out.println("");
+        }
+
+    }
     public static void main(String[] args) {
       //Ejercicio1();
       //Ejercicio2();
@@ -1068,6 +1085,7 @@ public class Main {
         int[] array = new int[10];
         //Ejercicio20Extra(array);
       //Fin
-        Ejercicio21Extra();
+        //Ejercicio21Extra();
+       Ejercicio22Extra();
     }
 }
