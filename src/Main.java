@@ -1115,6 +1115,27 @@ public class Main {
         }
 
     }
+    public static void Ejercicio24Extra(){
+        Scanner scanner = new Scanner(System.in).useLocale(Locale.US);
+        int fibonacci = scanner.nextInt();
+        int i = 0;
+
+        int aux2= 1;
+        int aux=0;
+
+        String agregar = "";
+        do {
+
+           int suma = aux + aux2;
+
+            aux = aux2;
+
+            aux2 = suma;
+            i++;
+            agregar = agregar +" "+ suma;
+        }while(i < fibonacci);
+        System.out.println(agregar);
+    }
     public static void main(String[] args) {
       //Ejercicio1();
       //Ejercicio2();
@@ -1163,6 +1184,7 @@ public class Main {
       //Fin
         //Ejercicio21Extra();
        //Ejercicio22Extra();
-       Ejercicio23Extra();
+       //Ejercicio23Extra();
+       Ejercicio24Extra();
     }
 }
