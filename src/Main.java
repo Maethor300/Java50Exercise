@@ -1039,6 +1039,82 @@ public class Main {
         }
 
     }
+    public static void Ejercicio23Extra(){
+        Scanner scanner = new Scanner(System.in).useLocale(Locale.US);
+        int i = 1;
+        int tamaño1;
+        int aleatorio;
+        int aleatorio2 = 0;
+        int aleatorio3;
+        int conteo;
+        int conteo1 = 0;
+        int conteo2 = 0;
+        int conteo3 = 0;
+        char subString;
+        String[][] matriz = new String[20][20];
+        String palabra;
+        for (int j = 0; j < 20; j++) {
+
+            for (int k = 0; k < 20; k++) {
+
+                aleatorio3 = (int) (Math.random() *8);
+                String letra = String.valueOf(aleatorio3);
+                matriz[j][k] = letra;
+
+                }
+
+            }
+
+
+        do {
+            aleatorio = (int) (Math.random() *20);
+            aleatorio2 = (int) (Math.random() *20);
+
+            System.out.println("Palabra " + i);
+              palabra = scanner.nextLine();
+
+            tamaño1 = palabra.length();
+
+            if(tamaño1 < 3 || tamaño1 > 5){
+                System.out.println("Palabra Erronea " + i);
+
+            }else {
+                i++;
+
+                for (int j = 0; j < 20; j++) {
+
+                    for (int k = 0; k < 20; k++) {
+
+                        for (int l = 0; l <= tamaño1 -1; l++) {
+                            subString = palabra.charAt(l);
+
+
+                            if(aleatorio2 + l == k ){
+                                matriz[aleatorio][k] =  String.valueOf(subString);
+
+                            }
+
+                        }
+
+                    }
+
+                }
+
+              }
+
+
+                           
+        }while (i <= 5);
+
+        for (int j = 0; j < 20; j++) {
+            for (int k = 0; k < 20; k++) {
+
+                System.out.print(" "+matriz[j][k]);
+            }
+            System.out.println();
+        }
+
+    }
     public static void main(String[] args) {
       //Ejercicio1();
       //Ejercicio2();
@@ -1086,6 +1162,7 @@ public class Main {
         //Ejercicio20Extra(array);
       //Fin
         //Ejercicio21Extra();
-       Ejercicio22Extra();
+       //Ejercicio22Extra();
+       Ejercicio23Extra();
     }
 }
