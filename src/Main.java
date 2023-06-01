@@ -1068,7 +1068,7 @@ public class Main {
 
         do {
             aleatorio = (int) (Math.random() *20);
-            aleatorio2 = (int) (Math.random() *20);
+            aleatorio2 = (int) (Math.random() *14);
 
             System.out.println("Palabra " + i);
               palabra = scanner.nextLine();
@@ -1184,7 +1184,7 @@ public class Main {
       //Fin
         //Ejercicio21Extra();
        //Ejercicio22Extra();
-       //Ejercicio23Extra();
-       Ejercicio24Extra();
+       Ejercicio23Extra();
+       //Ejercicio24Extra();
     }
 }
