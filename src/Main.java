@@ -110,8 +110,11 @@ public class Main {
     }
     public static void Ejercicio11(){
         Scanner scanner = new Scanner(System.in);
-
-         char palabra1 ;
+        System.out.println("Digita el numero 1");
+         int num1 = scanner.nextInt();
+        System.out.println("Digita el numero 2");
+         int num2 = scanner.nextInt();
+         boolean palabra1 = true;
          char palabra;
         do {
             System.out.println("===== MENÚ =====");
@@ -122,28 +125,31 @@ public class Main {
             System.out.println("5. Salir");
 
             System.out.print("Ingrese su opción: ");
-           palabra1 ='w';
+
             int num = scanner.nextInt();
            if(num == 1){
-               System.out.println("suma");
+               System.out.println("suma: " + (num1 + num2));
            }else if(num == 2){
-               System.out.println("resta");
+               System.out.println("resta: " + (num1 - num2));
            } else if (num == 3) {
-               System.out.println("Multiplicar");
+               System.out.println("Multiplicar: " + (num1 * num2));
            } else if (num == 4) {
-               System.out.println("Dividir");
+               System.out.println("Dividir: " + (num1 / num2));
            }else if (num == 5){
                System.out.println("Quieres Salir S/N");
                palabra = scanner.next().charAt(0);
                if( Character.toUpperCase(palabra) == 'S'){
-                   palabra1 = Character.toUpperCase(palabra);
+                   palabra1 = false;
                } else {
                    System.out.println("Volviendo al menu");
                  }
                }else{
                System.out.println("Opción inválida. Por favor, ingrese una opción válida.");
            }
-        }while(palabra1 != 'S');
+           if(!palabra1){
+               break;
+           }
+        }while(true);
     }
     public static void Ejercicio12(){
         Scanner scanner = new Scanner(System.in);
@@ -523,7 +529,7 @@ public class Main {
     }
     public static void Ejercicio1Extra(){
           Scanner scanner = new Scanner(System.in);
-        System.out.println("Digita el tiempo en minutos: ");
+        System.out.println("Digita el tiempo en horas: ");
           double numero = scanner.nextInt();
           double operacion = numero / 24;
 
@@ -1147,7 +1153,7 @@ public class Main {
       //Ejercicio8();
       //Ejercicio9();
       //Ejercicio10();
-      //Ejercicio11();
+      Ejercicio11();
       //Ejercicio12();
       //Ejercicio13();
       //Ejercicio14(1);
@@ -1184,7 +1190,7 @@ public class Main {
       //Fin
         //Ejercicio21Extra();
        //Ejercicio22Extra();
-       Ejercicio23Extra();
+       //Ejercicio23Extra();
        //Ejercicio24Extra();
     }
 }
